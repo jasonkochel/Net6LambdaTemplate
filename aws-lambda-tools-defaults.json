@@ -1,0 +1,36 @@
+
+{
+    "Information" : [
+        "This file provides default values for the deployment wizard inside Visual Studio and the AWS Lambda commands added to the .NET Core CLI.",
+        "To learn more about the Lambda commands with the .NET Core CLI execute the following command at the command line in the project root directory.",
+        "dotnet lambda help",
+        "All the command line options for the Lambda command can be specified in this file."
+    ],
+    "profile"     : "default",
+    "region"      : "us-east-1",
+    "configuration" : "Release",
+    "framework"     : "net6.0",
+    "msbuild-parameters" : "--self-contained true /p:AssemblyName=bootstrap",
+    "stack-name"         : "Net6LambdaTemplate",
+    "template"           : "serverless.template",
+    "s3-bucket"          : "jason_kochel",
+    "s3-prefix"          : "Net6LambdaTemplate/",
+    "xxusedtobe"         : {
+        "profile" : "default",
+        "region"  : "us-east-1",
+        "configuration" : "Release",
+        "framework"     : "net6.0",
+        "function-runtime" : "provided.al2",
+        "function-memory-size" : 128,
+        "function-timeout"     : 30,
+        "function-handler"     : "Net6LambdaTemplate::Net6LambdaTemplate.LambdaEntryPoint::FunctionHandlerAsync",
+        "msbuild-parameters"   : "--self-contained true",
+        "function-name"        : "Net6LambdaTemplate",
+        "package-type"         : "Zip",
+        "function-role"        : "arn:aws:iam::016551291133:role/lambda_exec_Net6Test",
+        "function-architecture" : "x86_64",
+        "tracing-mode"          : "PassThrough",
+        "environment-variables" : "",
+        "image-tag"             : ""
+    }
+}
